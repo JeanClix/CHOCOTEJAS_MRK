@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chocotejas a Pedido — Chocolatería artesanal para empresas</title>
+<meta name="description" content="Chocotejas artesanales hechas a pedido para empresas: regalos corporativos, detalles institucionales y eventos.">
+
+<!-- ============================================================
+     HUBSPOT: pega aquí el "Tracking Code" que te da HubSpot en
+     Settings > Tracking & Analytics > Tracking Code.
+     Con eso queda conectada la web al CRM y también se activa
+     el chatbot si creaste un chatflow de tipo "Website".
+     ============================================================ -->
+<!-- <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/TU_PORTAL_ID.js"></script> -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --cacao:#2B1710;
+    --cacao-soft:#4A2E20;
+    --caramelo:#B8703C;
+    --caramelo-deep:#93582D;
+    --pistacho:#8A9A5B;
+    --crema:#F7F0E4;
+    --crema-dim:#EFE4D0;
+    --serif: 'Fraunces', serif;
+    --sans: 'Inter', sans-serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--sans);
+    background:var(--crema);
+    color:var(--cacao);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(247,240,228,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(43,23,16,0.1);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 24px; max-width:1080px; margin:0 auto;
+  }
+  .logo{font-family:var(--serif); font-weight:600; font-size:1.25rem; letter-spacing:-0.02em;}
+  .logo span{color:var(--caramelo-deep);}
+  .nav-links{display:flex; gap:28px; font-size:0.95rem;}
+  .nav-links a{text-decoration:none; opacity:0.85; transition:opacity .2s;}
+  .nav-links a:hover{opacity:1;}
+  .nav-cta{
+    background:var(--cacao); color:var(--crema);
+    padding:10px 20px; border-radius:3px; text-decoration:none;
+    font-size:0.9rem; font-weight:500;
+    transition:background .2s;
+  }
+  .nav-cta:hover{background:var(--cacao-soft);}
+  .menu-btn{display:none; background:none; border:none; font-size:1.5rem; cursor:pointer; color:var(--cacao);}
+
+  /* ---------- hero ---------- */
+  .hero{
+    padding:88px 24px 96px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-inner{
+    max-width:1080px; margin:0 auto;
+    display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:center;
+  }
+  .eyebrow-note{
+    font-size:0.9rem; color:var(--caramelo-deep); font-weight:500; margin-bottom:18px;
+  }
+  h1{
+    font-family:var(--serif);
+    font-size:clamp(2.3rem, 4.2vw, 3.6rem);
+    line-height:1.06;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    max-width:11ch;
+  }
+  .hero p.lead{
+    margin-top:22px; font-size:1.1rem; max-width:42ch; opacity:0.82;
+  }
+  .hero-ctas{display:flex; gap:14px; margin-top:34px; flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--caramelo-deep); color:var(--crema); text-decoration:none;
+    padding:14px 26px; border-radius:3px; font-weight:500; font-size:0.98rem;
+    transition:background .2s, transform .2s;
+  }
+  .btn-primary:hover{background:#7a4a25; transform:translateY(-1px);}
+  .btn-ghost{
+    border:1px solid rgba(43,23,16,0.35); text-decoration:none; color:var(--cacao);
+    padding:14px 26px; border-radius:3px; font-size:0.98rem; font-weight:500;
+    transition:border-color .2s, background .2s;
+  }
+  .btn-ghost:hover{border-color:var(--cacao); background:rgba(43,23,16,0.04);}
+
+  .hero-visual{
+    aspect-ratio:4/5;
+    background:
+      radial-gradient(circle at 30% 25%, var(--pistacho) 0%, transparent 45%),
+      radial-gradient(circle at 70% 70%, var(--caramelo) 0%, transparent 50%),
+      var(--cacao);
+    border-radius:6px;
+    position:relative;
+    display:flex; align-items:flex-end; padding:28px;
+  }
+  .hero-visual .tag{
+    background:var(--crema); color:var(--cacao);
+    font-family:var(--serif); font-size:1.4rem; font-weight:600;
+    padding:18px 22px; border-radius:4px; max-width:220px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.25);
+  }
+
+  /* ---------- section shared ---------- */
+  section{padding:88px 0;}
+  .section-head{max-width:52ch; margin-bottom:52px;}
+  .section-head .kicker{color:var(--caramelo-deep); font-weight:500; font-size:0.9rem; margin-bottom:10px;}
+  .section-head h2{
+    font-family:var(--serif); font-size:clamp(1.8rem,3vw,2.4rem); font-weight:600; line-height:1.15;
+  }
+  .section-head p{margin-top:14px; opacity:0.78; font-size:1.05rem;}
+
+  /* ---------- proceso ---------- */
+  .proceso{background:var(--cacao); color:var(--crema);}
+  .proceso .section-head .kicker{color:var(--pistacho);}
+  .steps{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+    background:rgba(247,240,228,0.15);
+    border:1px solid rgba(247,240,228,0.15);
+  }
+  .step{background:var(--cacao); padding:34px 26px;}
+  .step .n{
+    font-family:var(--serif); font-size:1.6rem; color:var(--caramelo); font-weight:600;
+  }
+  .step h3{font-family:var(--serif); font-size:1.15rem; margin-top:14px; font-weight:500;}
+  .step p{margin-top:10px; font-size:0.92rem; opacity:0.72; line-height:1.55;}
+
+  /* ---------- productos ---------- */
+  .productos-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:28px;
+  }
+  .prod-card{
+    background:var(--crema-dim); border-radius:6px; padding:30px;
+    border-top:3px solid var(--caramelo);
+  }
+  .prod-card.alt{border-top-color:var(--pistacho);}
+  .prod-card h3{font-family:var(--serif); font-size:1.3rem; font-weight:600;}
+  .prod-card .price{color:var(--caramelo-deep); font-weight:600; margin-top:6px; font-size:0.95rem;}
+  .prod-card p{margin-top:14px; font-size:0.94rem; opacity:0.78;}
+  .prod-card ul{margin-top:16px; padding-left:18px; font-size:0.9rem; opacity:0.85;}
+  .prod-card li{margin-bottom:6px;}
+
+  /* ---------- pedido / form ---------- */
+  .pedido{background:var(--crema-dim);}
+  .form-shell{
+    max-width:640px; margin:0 auto;
+    background:var(--crema); border-radius:6px; padding:44px;
+    border:1px solid rgba(43,23,16,0.08);
+  }
+  .form-shell h3{font-family:var(--serif); font-size:1.4rem; font-weight:600; margin-bottom:8px;}
+  .form-shell .note{font-size:0.9rem; opacity:0.7; margin-bottom:28px;}
+  .field{margin-bottom:18px;}
+  .field label{display:block; font-size:0.88rem; font-weight:500; margin-bottom:6px;}
+  .field input, .field select, .field textarea{
+    width:100%; padding:12px 14px; border:1px solid rgba(43,23,16,0.22);
+    border-radius:3px; font-family:var(--sans); font-size:0.95rem; background:#fff;
+    color:var(--cacao);
+  }
+  .field textarea{resize:vertical; min-height:90px;}
+  .field-row{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  .submit-btn{
+    width:100%; background:var(--caramelo-deep); color:var(--crema); border:none;
+    padding:14px; border-radius:3px; font-size:1rem; font-weight:500; cursor:pointer;
+    margin-top:10px; transition:background .2s;
+  }
+  .submit-btn:hover{background:#7a4a25;}
+
+  /* ---------- HubSpot embebido (alternativa al form propio) ---------- */
+  .hubspot-form-slot{
+    border:1px dashed rgba(43,23,16,0.3); border-radius:6px; padding:24px;
+    font-size:0.88rem; opacity:0.65; text-align:center; margin-top:18px;
+  }
+
+  /* ---------- footer ---------- */
+  footer{background:var(--cacao); color:var(--crema); padding:56px 0 32px;}
+  .footer-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:32px;}
+  footer .logo{color:var(--crema);}
+  footer .logo span{color:var(--caramelo);}
+  footer p.tag{opacity:0.6; font-size:0.9rem; margin-top:8px; max-width:32ch;}
+  .footer-cols{display:flex; gap:56px;}
+  .footer-col h4{font-size:0.85rem; text-transform:uppercase; letter-spacing:0.06em; opacity:0.55; margin-bottom:14px;}
+  .footer-col a{display:block; text-decoration:none; opacity:0.8; font-size:0.92rem; margin-bottom:10px;}
+  .footer-bottom{
+    margin-top:48px; padding-top:24px; border-top:1px solid rgba(247,240,228,0.15);
+    font-size:0.82rem; opacity:0.5;
+  }
+
+  @media (max-width:860px){
+    .nav-links{display:none;}
+    .menu-btn{display:block;}
+    .hero-inner{grid-template-columns:1fr;}
+    .hero-visual{order:-1; aspect-ratio:16/9;}
+    .steps{grid-template-columns:1fr 1fr;}
+    .productos-grid{grid-template-columns:1fr;}
+    .field-row{grid-template-columns:1fr;}
+    .footer-grid{flex-direction:column;}
+    .footer-cols{gap:36px;}
+    .form-shell{padding:28px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">Cacao&nbsp;<span>&amp;</span>&nbsp;Encargo</div>
+    <nav class="nav-links">
+      <a href="#proceso">Cómo funciona</a>
+      <a href="#productos">Paquetes</a>
+      <a href="#pedido">Hacer pedido</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="nav-cta" href="#pedido">Cotizar pedido</a>
+  </div>
+</header>
+
+<main>
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <p class="eyebrow-note">Chocolatería artesanal para empresas</p>
+        <h1>Chocotejas hechas a tu medida, por encargo</h1>
+        <p class="lead">Preparamos chocotejas artesanales para empresas medianas y pequeñas: fijas la cantidad, el sabor y la presentación, y las elaboramos para tu pedido — nada de stock genérico.</p>
+        <div class="hero-ctas">
+          <a class="btn-primary" href="#pedido">Solicitar cotización</a>
+          <a class="btn-ghost" href="#productos">Ver paquetes</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="tag">Mínimo 50 unidades por encargo corporativo</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROCESO ================= -->
+  <section class="proceso" id="proceso">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Cómo funciona</p>
+        <h2>De tu pedido a la entrega, en cuatro pasos</h2>
+        <p>No fabricamos por anticipado. Cada lote empieza cuando confirmas tu encargo.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="n">01</div>
+          <h3>Cuéntanos qué necesitas</h3>
+          <p>Completas el formulario con cantidad, sabores y fecha de entrega deseada.</p>
+        </div>
+        <div class="step">
+          <div class="n">02</div>
+          <h3>Confirmamos y cotizamos</h3>
+          <p>Te contactamos en menos de 24 horas con precio final y disponibilidad.</p>
+        </div>
+        <div class="step">
+          <div class="n">03</div>
+          <h3>Preparamos tu lote</h3>
+          <p>Elaboramos las chocotejas frescas, personalizadas para tu empresa o evento.</p>
+        </div>
+        <div class="step">
+          <div class="n">04</div>
+          <h3>Entregamos</h3>
+          <p>Coordinamos recojo o delivery en la fecha acordada, empacado y listo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRODUCTOS ================= -->
+  <section id="productos">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Paquetes corporativos</p>
+        <h2>Pensados para empresas, no para el mostrador</h2>
+        <p>Tres formatos comunes de pedido. Todo es ajustable según tu presupuesto y cantidad.</p>
+      </div>
+      <div class="productos-grid">
+        <div class="prod-card">
+          <h3>Caja Equipo</h3>
+          <div class="price">Desde S/ 18 por caja</div>
+          <p>Cajas individuales para regalar a colaboradores en fechas especiales.</p>
+          <ul>
+            <li>6 chocotejas por caja</li>
+            <li>Sabores a elegir: lúcuma, maracuyá, pecana</li>
+            <li>Mínimo 50 cajas</li>
+          </ul>
+        </div>
+        <div class="prod-card alt">
+          <h3>Regalo Institucional</h3>
+          <div class="price">Desde S/ 32 por unidad</div>
+          <p>Presentación premium para clientes, proveedores o directorio.</p>
+          <ul>
+            <li>12 chocotejas + empaque con logo</li>
+            <li>Tarjeta personalizada incluida</li>
+            <li>Mínimo 30 unidades</li>
+          </ul>
+        </div>
+        <div class="prod-card">
+          <h3>Evento &amp; Feria</h3>
+          <div class="price">Cotización por volumen</div>
+          <p>Producción a granel para activaciones, ferias o lanzamientos.</p>
+          <ul>
+            <li>Formato suelto o mini-empaque</li>
+            <li>Sabores mixtos por lote</li>
+            <li>Mínimo 200 unidades</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PEDIDO (formulario) ================= -->
+  <section class="pedido" id="pedido">
+    <div class="wrap">
+      <div class="section-head" style="margin:0 auto 44px; text-align:center;">
+        <p class="kicker" style="text-align:center;">Hacer pedido</p>
+        <h2>Solicita tu cotización</h2>
+        <p style="margin-left:auto; margin-right:auto;">Completa los datos y te contactamos para confirmar sabores, cantidad y fecha de entrega.</p>
+      </div>
+
+      <div class="form-shell">
+        <h3>Datos del pedido</h3>
+        <p class="note">Este formulario es una maqueta de ejemplo. Reemplázalo por el formulario embebido de HubSpot (ver nota abajo) para que las respuestas lleguen directo al CRM.</p>
+
+        <form id="pedido-form">
+          <div class="field-row">
+            <div class="field">
+              <label for="empresa">Nombre de la empresa</label>
+              <input type="text" id="empresa" name="empresa" placeholder="Ej. Estudio Andina SAC" required>
+            </div>
+            <div class="field">
+              <label for="contacto">Persona de contacto</label>
+              <input type="text" id="contacto" name="contacto" placeholder="Nombre y apellido" required>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="email">Correo</label>
+              <input type="email" id="email" name="email" placeholder="tu@empresa.com" required>
+            </div>
+            <div class="field">
+              <label for="telefono">Teléfono / WhatsApp</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="+51 9xx xxx xxx" required>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="paquete">Paquete de interés</label>
+              <select id="paquete" name="paquete">
+                <option>Caja Equipo</option>
+                <option>Regalo Institucional</option>
+                <option>Evento &amp; Feria</option>
+                <option>Aún no sé, quiero asesoría</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="cantidad">Cantidad aproximada</label>
+              <input type="number" id="cantidad" name="cantidad" placeholder="Ej. 100" min="1">
+            </div>
+          </div>
+          <div class="field">
+            <label for="detalle">Detalles adicionales</label>
+            <textarea id="detalle" name="detalle" placeholder="Sabores, fecha de entrega, empaque con logo, etc."></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Enviar solicitud</button>
+        </form>
+
+        <!-- ============================================================
+             HUBSPOT FORM: aquí puedes pegar el <script> de un formulario
+             de HubSpot (Marketing > Forms > tu formulario > Embed code)
+             para reemplazar el formulario de arriba y que las respuestas
+             lleguen directo a los contactos del CRM.
+             ============================================================ -->
+        <div class="hubspot-form-slot">
+          Espacio reservado para el formulario embebido de HubSpot
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contacto">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="logo">Cacao&nbsp;<span>&amp;</span>&nbsp;Encargo</div>
+      <p class="tag">Chocotejas artesanales por encargo, hechas para empresas que quieren regalar algo distinto.</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="mailto:pedidos@cacaoyencargo.pe">pedidos@cacaoyencargo.pe</a>
+        <a href="tel:+51999999999">+51 999 999 999</a>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <a href="#proceso">Cómo funciona</a>
+        <a href="#productos">Paquetes</a>
+        <a href="#pedido">Hacer pedido</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    Cacao &amp; Encargo — empresa ficticia con fines académicos.
+  </div>
+</footer>
+
+</body>
+</html>
